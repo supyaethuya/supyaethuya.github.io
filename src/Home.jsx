@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import data from './Components.json';
-import logo1 from './assets/Logo1.png';
+import logo1 from '../public/Logo1.png';
 import consonant from './assets/Consonants.png';
 import HomeBackground from './HomeBackground';
 import vowel from './assets/Vowels.png';
