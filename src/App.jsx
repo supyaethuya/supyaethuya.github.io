@@ -8,7 +8,11 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       {data.map((item) => (
-        <Route path={`${item.path}/:id`} element={<ListView />} />
+        <Route
+          key={item.id}
+          path={`/${item.path}/:id`}
+          element={<ListView />}
+        />
       ))}
     </Routes>
   )
