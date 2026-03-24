@@ -1,0 +1,255 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #ffffffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #858585aa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  margin: 2em;
+  color: white;
+  background-color: transparent;     /* White background */
+  display: inline-block;
+}
+
+/* Style the button */
+.card button {
+  background: none;
+  border: none;
+  border-radius: 12px;         /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* Soft shadow */
+  cursor: pointer;
+  display: flex;              /* Enable flexbox */
+  flex-direction: column;     /* Stack image and text vertically */
+  align-items: center;        /* Center horizontally */
+  justify-content: center;    /* Center vertically */
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.card button:focus {
+  outline: none;
+}
+.card button img {
+  height: 200px;
+}
+
+.card button:hover {
+  color: black;
+  background-color: white;
+}
+
+.card h1,p {
+  background: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  display: flex;              /* Enable flexbox */
+  flex-direction: column;     /* Stack image and text vertically */
+  align-items: center;        /* Center horizontally */
+  justify-content: center;    /* Center vertically */
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.character {
+  min-width: 100px;
+  font-size: 4em;
+  font-weight: 800;
+  line-height: 1.5;     /* removes vertical padding from font */
+  display: block;
+  transform: translateY(-15px);
+  color: #ddd;
+  text-shadow:
+    0 3px 4px rgba(0,0,0,0.6),
+    0 -1px 1px rgba(255,255,255,0.3);
+}
+
+.pageContainer {
+  min-height: 100vh;     /* full screen height */
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start; /* 🔑 stick to top */
+  align-items: stretch;        /* full width */
+
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+}
+
+.backButton {
+  margin-right: 10px;
+}
+
+.headerRow h2 {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+}
+
+/* This part of CSS is for Modal */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal {
+  color: black;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  }
+.header {
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.closeBtn {
+  border: none;
+  color: black;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
+.content {
+  margin-top: 10px;
+}
+.audio {
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+
+}
+.audioButton {
+  background: #777777;
+  border: none;
+  padding: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  margin-right: 10px;
+}
+
+/* This part is for Tarce Card */
+ .trace-card {
+  width: 360px;
+  padding: 20px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  user-select: none;
+}
+
+.trace-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reset-btn {
+  border: none;
+  background: #111827;
+  color: white;
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.trace-message {
+  margin: 8px 0 12px;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.trace-svg {
+  width: 100%;
+  height: 320px;
+  display: block;
+  touch-action: none;
+}
+
+.character-bg {
+  fill: #d1d5db;
+  font-weight: 700;
+  display:inline-block;
+}
+
+.start-dot {
+  fill: #22c55e;
+}
+
+.guide-path {
+  stroke: #333;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16 16;
+}
+
+.guide-path-inactive {
+  opacity: 0.25;
+}
+
+.guide-path-active {
+  opacity: 1;
+}
+
+.guide-path-complete {
+  stroke: #22c55e;
+  stroke-dasharray: none;
+  opacity: 1;
+  stroke-width: 30;
+}
+
+.user-path {
+  stroke: #2563eb;
+  stroke-width: 30;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.95;
+}
